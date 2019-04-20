@@ -12,7 +12,8 @@ namespace Payroll.Core.Test
         {
             #region Arrange
             int empId = 1;
-            AddSalariedEmployee t = new AddSalariedEmployee(empId, "user", "Xindian", 1000.0);
+            string userName = "user";
+            AddSalariedEmployee t = new AddSalariedEmployee(empId, userName, "Xindian", 1000.0);
             #endregion
 
             #region Action
@@ -21,7 +22,7 @@ namespace Payroll.Core.Test
 
             #region Assert
             Employee e = PayrollRepository.GetEmployee(empId);
-            e.Name.Should().Be("user");
+            e.Name.Should().Be(userName);
 
             PaymentClassification pc = e.Classification;
             pc.Should().BeOfType<SalariedClassification>();
@@ -32,7 +33,7 @@ namespace Payroll.Core.Test
             ps.Should().BeOfType<MonthlySchedule>();
 
             PaymentMethod pm = e.Method;
-            ps.Should().BeOfType<HoldMethod>();
+            pm.Should().BeOfType<HoldMethod>();
             #endregion
         }
     }
