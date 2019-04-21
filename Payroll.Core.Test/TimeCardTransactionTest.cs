@@ -12,7 +12,7 @@ namespace Payroll.Core.Test
         public void TestAddTimeCard()
         {
             #region Arrange
-            int employeeId = 5;
+            int employeeId = 7;
             AddHourlyEmployee t = new AddHourlyEmployee(employeeId, "user", "home", 97.5);
             t.Execute();
 
