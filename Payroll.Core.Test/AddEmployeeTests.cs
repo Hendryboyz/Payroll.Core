@@ -72,7 +72,34 @@ namespace Payroll.Core.Test
         [Test]
         public void TestAddCommissionedEmployee()
         {
+            #region Arrange
+            int empId = 3;
+            string userName = "user";
+            string address = "Xindian";
+            AddCommissionedEmployee t = new AddCommissionedEmployee(empId, userName, address, 500.0, 97.5);
+            #endregion
 
+            #region Action
+            t.Execute();
+            #endregion
+
+            #region Assert
+            Employee e = PayrollRepository.GetEmployee(empId);
+            e.Name.Should().Be(userName);
+            e.Address.Should().Be(address);
+
+            PaymentClassification pc = e.Classification;
+            pc.Should().BeOfType<CommissionedClassification>();
+            CommissionedClassification cc = pc as CommissionedClassification;
+            cc.Salary.Should().Be(500.0);
+            cc.CommissionedRate.Should().Be(97.5);
+
+            PaymentSchedule ps = e.Schedule;
+            ps.Should().BeOfType<BiweeklySchedule>();
+
+            PaymentMethod pm = e.Method;
+            pm.Should().BeOfType<HoldMethod>();
+            #endregion
         }
     }
 }
