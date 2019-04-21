@@ -29,6 +29,5 @@ namespace Payroll.Core.Test
             e.Should().BeNull();
             #endregion
         }
-
     }
 }

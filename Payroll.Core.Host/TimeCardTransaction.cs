@@ -16,8 +16,23 @@ namespace Payroll.Core.Host
         public void Execute()
         {
             Employee e = PayrollRepository.GetEmployee(_employeeId);
-            HourlyClassification hc = e.Classification as HourlyClassification;
-            hc.AddTimeCard(_timeCard);
+            if (e != null)
+            {
+                HourlyClassification hc = e.Classification as HourlyClassification;
+                bool isHourlyEmployee = hc != null;
+                if (isHourlyEmployee)
+                {
+                    hc.AddTimeCard(_timeCard);
+                }
+                else
+                {
+                    throw new InvalidOperationException("non-hourly employee");
+                }
+            }
+            else
+            {
+                throw new InvalidOperationException("No such employee.");
+            }
         }
     }
 }
