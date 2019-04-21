@@ -38,6 +38,41 @@ namespace Payroll.Core.Test
         }
 
         [Test]
-        
+        public void TestAddHourlyEmployee()
+        {
+            #region Arrange
+            int empId = 2;
+            string userName = "user";
+            string address = "Xindian";
+            AddHourlyEmployee t = new AddHourlyEmployee(empId, userName, address, 97.5);
+            #endregion
+
+            #region Action
+            t.Execute();
+            #endregion
+
+            #region Assert
+            Employee e = PayrollRepository.GetEmployee(empId);
+            e.Name.Should().Be(userName);
+            e.Address.Should().Be(address);
+
+            PaymentClassification pc = e.Classification;
+            pc.Should().BeOfType<HourlyClassification>();
+            HourlyClassification hc = pc as HourlyClassification;
+            hc.HourlyRate.Should().Be(97.5);
+
+            PaymentSchedule ps = e.Schedule;
+            ps.Should().BeOfType<WeeklySchedule>();
+
+            PaymentMethod pm = e.Method;
+            pm.Should().BeOfType<HoldMethod>();
+            #endregion
+        }
+
+        [Test]
+        public void TestAddCommissionedEmployee()
+        {
+
+        }
     }
 }

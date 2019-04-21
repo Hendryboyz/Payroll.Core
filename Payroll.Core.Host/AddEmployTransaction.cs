@@ -9,6 +9,7 @@ namespace Payroll.Core.Host
             _employee = new Employee();
             _employee.Id = employeeId;
             _employee.Name = name;
+            _employee.Address = address;
         }
 
         public void Execute()
