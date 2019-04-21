@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 
 namespace Payroll.Core.Host
@@ -15,6 +16,11 @@ namespace Payroll.Core.Host
         public static Employee GetEmployee(int employId)
         {
             return employees[employId] as Employee;
+        }
+
+        public static void DeleteEmployee(int employeeId)
+        {
+            employees.Remove(employeeId);
         }
     }
 }
