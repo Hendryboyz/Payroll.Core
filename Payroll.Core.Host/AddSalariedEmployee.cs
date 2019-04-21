@@ -2,7 +2,7 @@ namespace Payroll.Core.Host
 {
     public class AddSalariedEmployee : AddEmployTransaction
     {
-        private double _salary;
+        private readonly double _salary;
 
         public AddSalariedEmployee(int employeeId, string name, string address, double salaries) 
             : base(employeeId, name, address)
@@ -10,17 +10,12 @@ namespace Payroll.Core.Host
             _salary = salaries;
         }
 
-        protected override PaymentClassification GetPaymentClassification()
+        protected override PaymentClassification CreatePaymentClassification()
         {
             return new SalariedClassification(_salary);
         }
 
-        protected override PaymentMethod GetPaymentMethod()
-        {
-            return new HoldMethod();
-        }
-
-        protected override PaymentSchedule GetPaymentSchedule()
+        protected override PaymentSchedule CreatePaymentSchedule()
         {
             return new MonthlySchedule();
         }

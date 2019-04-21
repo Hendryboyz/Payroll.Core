@@ -5,7 +5,7 @@ using Payroll.Core.Host;
 namespace Payroll.Core.Test
 {
     [TestFixture]
-    public class AddSalariedEmployeeTests
+    public class AddEmployeeTests
     {
         [Test]
         public void TestAddSalariedEmployee()
@@ -36,5 +36,8 @@ namespace Payroll.Core.Test
             pm.Should().BeOfType<HoldMethod>();
             #endregion
         }
+
+        [Test]
+        
     }
 }

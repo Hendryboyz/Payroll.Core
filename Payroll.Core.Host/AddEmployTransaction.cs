@@ -13,15 +13,14 @@ namespace Payroll.Core.Host
 
         public void Execute()
         {
-            _employee.Classification = GetPaymentClassification();
-            _employee.Schedule = GetPaymentSchedule();
-            _employee.Method = GetPaymentMethod();
+            _employee.Classification = CreatePaymentClassification();
+            _employee.Schedule = CreatePaymentSchedule();
+            _employee.Method = new HoldMethod();
             
             PayrollRepository.AddEmpoyee(_employee.Id, _employee);
         }
 
-        protected abstract PaymentClassification GetPaymentClassification();
-        protected abstract PaymentSchedule GetPaymentSchedule();
-        protected abstract PaymentMethod GetPaymentMethod();
+        protected abstract PaymentClassification CreatePaymentClassification();
+        protected abstract PaymentSchedule CreatePaymentSchedule();
     }
 }
