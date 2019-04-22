@@ -6,6 +6,7 @@ namespace Payroll.Core.Host
     public class PayrollRepository
     {
         private static Hashtable employees = new Hashtable();
+        private static Hashtable unionMembers = new Hashtable();
 
         public static void AddEmpoyee(int employId, Employee e) 
         {
@@ -21,6 +22,16 @@ namespace Payroll.Core.Host
         public static void DeleteEmployee(int employeeId)
         {
             employees.Remove(employeeId);
+        }
+
+        public static void AddUnionMember(int memberId, Employee e)
+        {
+            unionMembers.Add(memberId, e);
+        }
+
+        public static Employee GetUnionMember(int memberId)
+        {
+            return unionMembers[memberId] as Employee;
         }
     }
 }
