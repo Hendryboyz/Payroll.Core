@@ -18,9 +18,17 @@ namespace Payroll.Core.Host
         public void Execute()
         {
             Employee e = PayrollRepository.GetUnionMember(_memberId);
-            UnionAffliation ua = e.Affliation;
-            ServiceCharge sc = new ServiceCharge(_date, _amount);
-            ua.AddServiceCharge(sc);
+            bool isExistingMember = e != null;
+            if (isExistingMember)
+            {
+                UnionAffliation ua = e.Affliation;
+                ServiceCharge sc = new ServiceCharge(_date, _amount);
+                ua.AddServiceCharge(sc);
+            }
+            else
+            {
+                throw new InvalidOperationException("No such union member.");    
+            }
         }
     }
 }

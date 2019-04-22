@@ -37,5 +37,25 @@ namespace Payroll.Core.Test
             sc.Amount.Should().Be(10.0);
             #endregion
         }
+
+        [Test]
+        public void GivenNotExistingMemberId_WhenExecuteServiceCharge_ThenThrowInvalidOperaionException()
+        {
+            #region Arrange
+            int memberId = 881;
+
+            ServiceChargeTransaction sct = new ServiceChargeTransaction(
+                memberId, new DateTime(2019, 10, 10), 10.0);
+            #endregion
+
+            #region Action
+            Exception ex = Assert.Catch<Exception>(() => sct.Execute());
+            #endregion
+
+            #region Assert
+            ex.Should().BeOfType<InvalidOperationException>();
+            ex.Message.Should().Contain("No such union member.");
+            #endregion
+        }
     }
 }
