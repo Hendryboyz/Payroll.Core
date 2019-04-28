@@ -22,7 +22,7 @@ namespace Payroll.Core.Host
                 Employee e = PayrollRepository.GetEmployee(eachId);
                 if (e.IsPayday(_payDate))
                 {
-                    PayCheck pc = new PayCheck();
+                    PayCheck pc = new PayCheck(_payDate);
                     _payChecks[eachId] = pc;
                     e.Payday(pc);
                     pc.PayDate = _payDate;

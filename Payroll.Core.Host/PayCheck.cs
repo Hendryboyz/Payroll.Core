@@ -12,8 +12,9 @@ namespace Payroll.Core.Host
         public double Deductions { get; set; }
         public double NetPay { get; set; }
 
-        public PayCheck()
+        public PayCheck(DateTime payDate)
         {
+            PayDate = payDate;
             _payCheckDetails = new Hashtable();
         }
 

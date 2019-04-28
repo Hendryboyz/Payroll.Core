@@ -29,7 +29,8 @@ namespace Payroll.Core.Host
 
         public override double CalculatePay(PayCheck payCheck)
         {
-            throw new NotImplementedException();
+            double totalPay = Salary;
+            return totalPay;
         }
     }
 }
