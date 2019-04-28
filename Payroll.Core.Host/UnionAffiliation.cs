@@ -30,5 +30,10 @@ namespace Payroll.Core.Host
         {
             _serviceCharge.Add(sc.Date, sc);
         }
+
+        public override double CalculateDeductions(PayCheck payCheck)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,7 +1,9 @@
+using System;
+
 namespace Payroll.Core.Host
 {
-    public class PaymentMethod
+    public abstract class PaymentMethod
     {
-        
+        public abstract void Pay(PayCheck payCheck);
     }
 }

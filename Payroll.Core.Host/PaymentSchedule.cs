@@ -1,7 +1,9 @@
+using System;
+
 namespace Payroll.Core.Host
 {
-    public class PaymentSchedule
+    public abstract class PaymentSchedule
     {
-        
+        public abstract bool IsPayDay(DateTime payDate);
     }
 }

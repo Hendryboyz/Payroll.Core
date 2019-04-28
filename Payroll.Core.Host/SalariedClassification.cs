@@ -8,5 +8,10 @@ namespace Payroll.Core.Host
         }
 
         public double Salary { get; set; }
+
+        public override double CalculatePay(PayCheck payCheck)
+        {
+            return Salary;
+        }
     }
 }

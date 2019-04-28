@@ -10,5 +10,10 @@ namespace Payroll.Core.Host
             Bank = bank;
             Account = account;
         }
+
+        public override void Pay(PayCheck payCheck)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

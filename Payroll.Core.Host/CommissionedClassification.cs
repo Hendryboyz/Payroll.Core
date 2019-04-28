@@ -26,5 +26,10 @@ namespace Payroll.Core.Host
         {
             _salesReceipts.Add(sr.WorkingDate, sr);
         }
+
+        public override double CalculatePay(PayCheck payCheck)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

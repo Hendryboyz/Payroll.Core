@@ -1,6 +1,9 @@
+using System;
+
 namespace Payroll.Core.Host
 {
-    public class Affiliation
+    public abstract class Affiliation
     {
+        public abstract double CalculateDeductions(PayCheck payCheck);
     }
 }

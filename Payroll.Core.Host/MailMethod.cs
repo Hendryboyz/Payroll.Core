@@ -8,5 +8,10 @@ namespace Payroll.Core.Host
         {
             Address = address;
         }
+
+        public override void Pay(PayCheck payCheck)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

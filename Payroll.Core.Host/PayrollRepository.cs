@@ -8,11 +8,23 @@ namespace Payroll.Core.Host
         private static Hashtable employees = new Hashtable();
         private static Hashtable unionMembers = new Hashtable();
 
+        public static void Init()
+        {
+            employees = new Hashtable();
+            unionMembers = new Hashtable();
+        }
+
         public static void AddEmpoyee(int employId, Employee e) 
         {
             employees.Add(employId, e);
         }
 
+        
+
+        public static ArrayList GetAllEmployeeIds()
+        {
+            return new ArrayList(employees.Keys);
+        }
 
         public static Employee GetEmployee(int employId)
         {
