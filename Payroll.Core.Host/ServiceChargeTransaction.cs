@@ -21,7 +21,7 @@ namespace Payroll.Core.Host
             bool isExistingMember = e != null;
             if (isExistingMember)
             {
-                UnionAffliation ua = e.Affliation;
+                UnionAffiliation ua = e.Affiliation as UnionAffiliation;
                 ServiceCharge sc = new ServiceCharge(_date, _amount);
                 ua.AddServiceCharge(sc);
             }

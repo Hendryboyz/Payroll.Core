@@ -3,13 +3,22 @@ using System.Collections;
 
 namespace Payroll.Core.Host
 {
-    public class UnionAffliation
+    public class UnionAffiliation : Affiliation
     {
+        public int MemberId { get; set; }
+        public double Dues { get; set; }
+        
         private Hashtable _serviceCharge;
 
-        public UnionAffliation()
+        public UnionAffiliation()
         {
-            _serviceCharge = new Hashtable();    
+            _serviceCharge = new Hashtable();
+        }
+        
+        public UnionAffiliation(int memberId, double dues) : this()
+        {
+            MemberId = memberId;
+            Dues = dues;
         }
 
         public ServiceCharge GetServiceCharge(DateTime dateTime)

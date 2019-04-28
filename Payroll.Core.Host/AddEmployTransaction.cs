@@ -17,7 +17,8 @@ namespace Payroll.Core.Host
             _employee.Classification = CreatePaymentClassification();
             _employee.Schedule = CreatePaymentSchedule();
             _employee.Method = new HoldMethod();
-            
+            _employee.Affiliation = new NoAffiliaction();
+                        
             PayrollRepository.AddEmpoyee(_employee.Id, _employee);
         }
 

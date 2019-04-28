@@ -17,8 +17,8 @@ namespace Payroll.Core.Test
             Employee e = PayrollRepository.GetEmployee(employeeId);
             e.Should().NotBeNull();
 
-            UnionAffliation af = new UnionAffliation();
-            e.Affliation = af;
+            UnionAffiliation af = new UnionAffiliation();
+            e.Affiliation = af;
             int memberId = 886;
             PayrollRepository.AddUnionMember(memberId, e);
 

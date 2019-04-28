@@ -24,6 +24,11 @@ namespace Payroll.Core.Host
             employees.Remove(employeeId);
         }
 
+        public static void RemoveUnionMember(int memberId)
+        {
+            unionMembers.Remove(memberId);
+        }
+
         public static void AddUnionMember(int memberId, Employee e)
         {
             unionMembers.Add(memberId, e);

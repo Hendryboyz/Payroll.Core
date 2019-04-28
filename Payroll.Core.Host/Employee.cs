@@ -8,6 +8,6 @@ namespace Payroll.Core.Host
         public PaymentClassification Classification { get; set; }
         public PaymentMethod Method { get; set; }
         public PaymentSchedule Schedule { get; set; }
-        public UnionAffliation Affliation { get; set; }
+        public Affiliation Affiliation { get; set; }
     }
 }
