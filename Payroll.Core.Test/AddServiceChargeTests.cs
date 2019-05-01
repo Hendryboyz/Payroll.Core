@@ -1,8 +1,10 @@
 using System;
 using FluentAssertions;
 using NUnit.Framework;
-using Payroll.Core.Host;
 using Payroll.Core.Domain;
+using Payroll.Core.Affiliations;
+using Payroll.Core.Transactions;
+using Payroll.Core.DataBase;
 
 namespace Payroll.Core.Test
 {

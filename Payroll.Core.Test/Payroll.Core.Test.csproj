@@ -14,8 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Payroll.Core.Host\Payroll.Core.Host.csproj" />
     <ProjectReference Include="..\Payroll.Core.Domain\Payroll.Core.Domain.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Classifications\Payroll.Core.Classifications.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Transactions\Payroll.Core.Transactions.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Database\Payroll.Core.Database.csproj" />
   </ItemGroup>
 
 </Project>
