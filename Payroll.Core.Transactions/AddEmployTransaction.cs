@@ -1,4 +1,5 @@
 using Payroll.Core.Domain;
+using Payroll.Core.Methods;
 
 namespace Payroll.Core.Transactions
 {

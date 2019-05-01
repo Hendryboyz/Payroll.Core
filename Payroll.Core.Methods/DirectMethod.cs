@@ -1,6 +1,6 @@
 using Payroll.Core.Domain;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Methods
 {
     public class DirectMethod : PaymentMethod
     {
