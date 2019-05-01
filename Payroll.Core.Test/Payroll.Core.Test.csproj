@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Payroll.Core.Host\Payroll.Core.Host.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Domain\Payroll.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>

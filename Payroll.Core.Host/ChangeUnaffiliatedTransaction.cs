@@ -1,3 +1,5 @@
+using Payroll.Core.Domain;
+
 namespace Payroll.Core.Host
 {
     public class ChangeUnaffiliatedTransaction : ChangeAffiliationTransaction

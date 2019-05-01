@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Core.Host", "Payrol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Core.Test", "Payroll.Core.Test\Payroll.Core.Test.csproj", "{06E2F58A-CE42-4470-AF15-555F5C65820B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Core.Domain", "Payroll.Core.Domain\Payroll.Core.Domain.csproj", "{B0364605-9462-4EF9-AA90-3431FCBD4348}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{06E2F58A-CE42-4470-AF15-555F5C65820B}.Release|x64.Build.0 = Release|Any CPU
 		{06E2F58A-CE42-4470-AF15-555F5C65820B}.Release|x86.ActiveCfg = Release|Any CPU
 		{06E2F58A-CE42-4470-AF15-555F5C65820B}.Release|x86.Build.0 = Release|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Debug|x64.Build.0 = Debug|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Release|x64.ActiveCfg = Release|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Release|x64.Build.0 = Release|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Release|x86.ActiveCfg = Release|Any CPU
+		{B0364605-9462-4EF9-AA90-3431FCBD4348}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

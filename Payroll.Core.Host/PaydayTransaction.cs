@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Payroll.Core.Domain;
 
 namespace Payroll.Core.Host
 {

@@ -1,6 +1,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 using Payroll.Core.Host;
+using Payroll.Core.Domain;
 
 namespace Payroll.Core.Test
 {

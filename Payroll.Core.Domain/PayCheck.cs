@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Domain
 {
     public class PayCheck
     {

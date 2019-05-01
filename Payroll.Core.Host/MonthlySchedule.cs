@@ -1,4 +1,5 @@
 using System;
+using Payroll.Core.Domain;
 
 namespace Payroll.Core.Host
 {

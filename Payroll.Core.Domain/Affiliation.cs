@@ -1,6 +1,6 @@
 using System;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Domain
 {
     public abstract class Affiliation
     {
