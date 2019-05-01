@@ -1,8 +1,8 @@
 using Payroll.Core.Domain;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Transactions
 {
-    public abstract  class ChangeClassificationTransaction : ChangeEmployeeTransaction
+    public abstract class ChangeClassificationTransaction : ChangeEmployeeTransaction
     {
         public ChangeClassificationTransaction(int employeeId) : base(employeeId)
         {

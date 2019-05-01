@@ -1,6 +1,7 @@
 using Payroll.Core.Domain;
+using Payroll.Core.Classifications;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Transactions
 {
     public class ChangeCommissionedTransaction : ChangeClassificationTransaction
     {

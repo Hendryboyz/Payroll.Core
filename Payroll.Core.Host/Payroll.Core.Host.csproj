@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Payroll.Core.Domain\Payroll.Core.Domain.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Classifications\Payroll.Core.Classifications.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

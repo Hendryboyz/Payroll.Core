@@ -1,7 +1,7 @@
 using System;
 using Payroll.Core.Domain;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Transactions
 {
     public abstract class ChangeEmployeeTransaction : ITransaction
     {

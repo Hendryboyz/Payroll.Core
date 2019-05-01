@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Payroll.Core.Classifications\Payroll.Core.Classifications.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Schedules\Payroll.Core.Schedules.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Domain\Payroll.Core.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
