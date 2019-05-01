@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Payroll.Core.Domain;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Schedules
 {
     public class BiweeklySchedule : PaymentSchedule
     {

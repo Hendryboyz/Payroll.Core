@@ -1,4 +1,6 @@
 using Payroll.Core.Domain;
+using Payroll.Core.Classifications;
+using Payroll.Core.Schedules;
 
 namespace Payroll.Core.Transactions
 {
