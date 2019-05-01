@@ -5,6 +5,7 @@
     <ProjectReference Include="..\Payroll.Core.Schedules\Payroll.Core.Schedules.csproj" />
     <ProjectReference Include="..\Payroll.Core.Domain\Payroll.Core.Domain.csproj" />
     <ProjectReference Include="..\Payroll.Core.Methods\Payroll.Core.Methods.csproj" />
+    <ProjectReference Include="..\Payroll.Core.Affiliations\Payroll.Core.Affiliations.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

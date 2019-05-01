@@ -1,6 +1,6 @@
 using Payroll.Core.Domain;
 
-namespace Payroll.Core.Host
+namespace Payroll.Core.Affiliations
 {
     public class NoAffiliaction : Affiliation
     {
