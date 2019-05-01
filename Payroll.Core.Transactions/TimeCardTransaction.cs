@@ -1,6 +1,7 @@
 using System;
 using Payroll.Core.Domain;
 using Payroll.Core.Classifications;
+using Payroll.Core.DataBase;
 
 namespace Payroll.Core.Transactions
 {

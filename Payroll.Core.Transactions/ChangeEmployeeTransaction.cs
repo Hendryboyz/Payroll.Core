@@ -1,6 +1,6 @@
 using System;
 using Payroll.Core.Domain;
-
+using Payroll.Core.DataBase;
 namespace Payroll.Core.Transactions
 {
     public abstract class ChangeEmployeeTransaction : ITransaction

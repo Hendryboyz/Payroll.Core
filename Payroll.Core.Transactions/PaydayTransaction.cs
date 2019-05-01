@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Payroll.Core.Domain;
+using Payroll.Core.DataBase;
 
 namespace Payroll.Core.Transactions
 {
