@@ -25,11 +25,10 @@ namespace Payroll.Core.Transactions
             if (isValidEmployee)
             {
                 CommissionedClassification cc = e.Classification as CommissionedClassification;
-                SalesReceipt sr = new SalesReceipt(_employeeId, _workingDate, _amount);
                 bool isCommenssionedEmployee = cc != null;
                 if (isCommenssionedEmployee)
                 {
-                    cc.AddSalesReceipt(sr);
+                    cc.AddSalesReceipt(_employeeId, _workingDate, _amount);
                 }
                 else
                 {

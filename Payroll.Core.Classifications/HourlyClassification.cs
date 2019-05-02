@@ -17,8 +17,9 @@ namespace Payroll.Core.Classifications
             _timeCards = new Hashtable();
         }
 
-        public void AddTimeCard(TimeCard timeCard)
+        public void AddTimeCard(int employeeId, DateTime workingDate, double workingHours)
         {
+            TimeCard timeCard = new TimeCard(employeeId, workingDate, workingHours);
             _timeCards.Add(timeCard.Date, timeCard);
         }
 

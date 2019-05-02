@@ -8,12 +8,14 @@ namespace Payroll.Core.Transactions
     public class TimeCardTransaction : ITransaction
     {
         private readonly int _employeeId;
-        private readonly TimeCard _timeCard;
+        private readonly DateTime _workingDate;
+        private readonly double _workingHours;
 
         public TimeCardTransaction(int employeeId, DateTime workingDate, double workingHours)
         {
             _employeeId = employeeId;
-            _timeCard = new TimeCard(employeeId, workingDate, workingHours);
+            _workingDate = workingDate;
+            _workingHours = workingHours;
         }
 
         public void Execute()
@@ -25,7 +27,7 @@ namespace Payroll.Core.Transactions
                 bool isHourlyEmployee = hc != null;
                 if (isHourlyEmployee)
                 {
-                    hc.AddTimeCard(_timeCard);
+                    hc.AddTimeCard(_employeeId, _workingDate, _workingHours);
                 }
                 else
                 {

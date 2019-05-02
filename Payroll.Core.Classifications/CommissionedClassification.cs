@@ -23,8 +23,9 @@ namespace Payroll.Core.Classifications
             return _salesReceipts[workingDate] as SalesReceipt;
         }
 
-        public void AddSalesReceipt(SalesReceipt sr)
+        public void AddSalesReceipt(int employeeId, DateTime workingDate, int amount)
         {
+            SalesReceipt sr = new SalesReceipt(employeeId, workingDate, amount);
             _salesReceipts.Add(sr.WorkingDate, sr);
         }
 
